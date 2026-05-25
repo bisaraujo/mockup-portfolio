@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Server uploads (local dev fallback; production uses Cloudinary)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Legacy JSON data files (replaced by MongoDB Atlas)
+server/data/*.json
+!server/data/.gitkeep
+server/pre-restore-backup/
+server/safety-backup-before-clear/
+
+# Server temp / backup artifacts
+server/backups/
+server/temp-uploads/
+server/temp-backup/
+server/temp-restore/
+
+# Environment variables
+.env
+server/.env
+.env.local
+.env.production
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vercel
+.env*.local

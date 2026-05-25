@@ -1,0 +1,54 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  padding-top: clamp(4rem, 8vh, 6rem);
+  transition: padding-top 0.3s ease;
+}
+
+.content-wrapper {
+  flex: 1;
+  margin-left: 15.625rem;
+  transition: margin-left 0.3s ease;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper.sidebar-closed {
+  margin-left: 0;
+}
+
+@media (max-width: 48rem) {
+  .main-container {
+    padding-top: clamp(7rem, 15vh, 10rem);
+  }
+  
+  .content-wrapper {
+    margin-left: 0;
+    padding: 0.9375rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .main-container {
+    padding-top: clamp(8rem, 18vh, 12rem);
+  }
+  
+  .content-wrapper {
+    padding: 0.75rem;
+  }
+}
+
+/* Extra small devices (phones < 360px) */
+@media (max-width: 22.5rem) {
+  .content-wrapper {
+    padding: 0.5rem;
+  }
+}

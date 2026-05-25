@@ -1,0 +1,1070 @@
+﻿.character-page {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.character-header {
+  margin-bottom: 2rem;
+  border-bottom: 0.125rem solid var(--border);
+  padding-bottom: 1.25rem;
+}
+
+.character-header h1 {
+  margin: 0 0 0.625rem 0;
+  font-size: 2.5rem;
+}
+
+.character-owner {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0.625rem 0;
+}
+
+.character-actions {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.character-actions button {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.character-actions button:hover {
+  opacity: 0.9;
+}
+
+.delete-btn {
+  background: #dc3545 !important;
+}
+
+/* Tabs */
+.character-tabs {
+  display: flex;
+  gap: 0.313rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.125rem solid var(--border);
+}
+
+.character-tabs button {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  border-bottom: 0.188rem solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.character-tabs button:hover {
+  background: var(--hover);
+}
+
+.character-tabs button.active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Tab content */
+.character-tab-content {
+  background: var(--bg-secondary);
+  padding: 1.875rem;
+  border-radius: 0.5rem;
+  min-height: 31.25rem;
+}
+
+/* Figures and captions inside character content */
+.character-tab-content figure {
+  margin: 1.25rem 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.character-tab-content figure img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 0.25rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.character-tab-content figcaption {
+  margin-top: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  background: var(--bg);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  max-width: 80%;
+}
+
+/* Fallback: style a short paragraph immediately following an image as a caption */
+.character-tab-content img + p {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  background: var(--bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.3125rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Edit form */
+.edit-form label {
+  display: block;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+
+.edit-form input[type="text"],
+.edit-form textarea {
+  width: 100%;
+  padding: 0.625rem;
+  margin-top: 0.313rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.sidebar-editor {
+  margin: 1.875rem 0;
+  padding: 1.25rem;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  border: 0.063rem solid var(--border);
+}
+
+.sidebar-editor h3,
+.sidebar-editor h4 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.info-field {
+  display: flex;
+  gap: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+.info-field input {
+  flex: 1;
+}
+
+.info-field button {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.button-group button {
+  padding: 0.625rem 1.875rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button-group button:last-child {
+  background: var(--border);
+}
+
+/* Diary */
+.diary-tab h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.diary-entry-form {
+  margin-bottom: 1.875rem;
+  padding: 1.25rem;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  border: 0.063rem solid var(--border);
+}
+
+.diary-entry-form textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg-secondary);
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.diary-entry-form button {
+  padding: 0.625rem 1.875rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.diary-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.diary-entry {
+  background: var(--bg);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 0.063rem solid var(--border);
+}
+
+.diary-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 0.063rem solid var(--border);
+}
+
+.diary-date {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.diary-entry button {
+  padding: 0.313rem 0.625rem;
+  background: #dc3545;
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.diary-entry p {
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Inventory */
+.inventory-tab h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.inventory-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inventory-controls input[type="text"] {
+  flex: 1 1 320px;
+  padding: 0.75rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg-secondary);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.inventory-controls label {
+  margin-right: 0.25rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.inventory-controls select,
+.inventory-controls button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: 0.063rem solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Sorting group inside inventory controls */
+.inventory-controls .sort-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
+}
+
+.inventory-controls .sort-group .sort-select,
+.inventory-controls select {
+  min-width: 8rem;
+}
+
+.inventory-controls .sort-direction-btn,
+.inventory-controls .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  background: var(--bg-secondary);
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.inventory-controls .sort-direction-btn:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.inventory-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 6.25rem auto;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  border: 0.063rem solid var(--border);
+  align-items: center;
+}
+
+.inventory-form input[type="text"],
+.inventory-form input[type="number"] {
+  width: 100%;
+  padding: 0.65rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg-secondary);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.inventory-form input[type="number"] {
+  width: 6.25rem;
+}
+
+/* Coin counters under inventory */
+.coin-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1rem 0;
+}
+.coin-label {
+  font-weight: 700;
+  margin-right: 0.5rem;
+  min-width: 3.25rem;
+}
+.coin-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.coin-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+  min-width: 5.25rem;
+}
+.coin-item label { font-size: 0.75rem; color: var(--text-secondary); }
+.coin-item .coin-input:focus, .inventory-controls input[type="text"]:focus, .inventory-form input:focus {
+  outline: 0.125rem solid rgba(29, 78, 216, 0.12);
+  box-shadow: 0 4px 18px rgba(29,78,216,0.06);
+}
+
+.coin-item .coin-input {
+  transition: box-shadow 0.12s, transform 0.08s;
+}
+.coin-item .coin-input:hover {
+  transform: translateY(-1px);
+}
+
+/* Make the coins visually grouped on larger screens */
+@media (min-width: 48rem) {
+  .coin-row { margin-left: 0; }
+  .inventory-controls .sort-group { margin-left: auto; }
+}
+.coin-input {
+  width: 5.25rem;
+  padding: 0.35rem 0.5rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+  text-align: right;
+}
+
+.inventory-form button {
+  padding: 0.625rem 1.875rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+
+.inventory-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(24,24,24,0.06);
+}
+
+.inventory-table thead th {
+  background: var(--accent);
+  color: var(--button-text);
+  padding: 0.938rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+}
+
+.inventory-table tbody td {
+  padding: 0.75rem 1rem;
+  border-bottom: 0.063rem solid var(--border);
+  vertical-align: middle;
+}
+
+.inventory-table tbody tr:nth-child(even) {
+  background: rgba(0,0,0,0.02);
+}
+
+.inventory-table tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 56rem) {
+  .inventory-form {
+    grid-template-columns: 1fr;
+  }
+
+  .inventory-controls input[type="text"] {
+    flex-basis: 100%;
+  }
+
+  .coin-row { gap: 0.5rem; }
+
+  .inventory-table thead th, .inventory-table tbody td {
+    padding: 0.6rem 0.75rem;
+  }
+}
+
+.inventory-table input {
+  width: 100%;
+  padding: 0.313rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg-secondary);
+  color: var(--text);
+}
+
+.inventory-table button {
+  padding: 0.313rem 0.625rem;
+  margin-right: 0.313rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.inventory-table button:last-child {
+  background: #dc3545;
+  margin-right: 0;
+}
+
+/* Character Sheet */
+.sheet-tab h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.sheet-upload {
+  margin-bottom: 1.875rem;
+  padding: 1.875rem;
+  background: var(--bg);
+  border: 0.125rem dashed var(--border);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.sheet-upload input[type="file"] {
+  margin-bottom: 0.625rem;
+}
+
+.sheet-upload p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.sheet-viewer {
+  background: var(--bg);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 0.063rem solid var(--border);
+}
+
+/* HP counter UI in sheet area */
+.sheet-hp {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.sheet-hp .hp-group,
+.sheet-hp .temp-hp-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.hp-label { font-weight: 700; margin-right: 0.5rem; }
+.hp-controls { display: inline-flex; align-items: center; gap: 0.5rem; }
+.hp-btn {
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+.hp-input {
+  width: 4.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
+.hp-sep { font-weight: 700; padding: 0 0.25rem; }
+.temp-label { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; }
+.temp-controls { margin-left: 0.5rem; }
+
+/* Make embedded PDFs expand vertically to use available viewport space */
+.sheet-viewer .sheet-iframe,
+.sheet-iframe {
+  width: 100%;
+  border: none;
+  /* Use most of the viewport but leave space for header and padding */
+  height: calc(100vh - 12rem);
+  min-height: 60vh;
+  max-height: 1400px; /* reasonable cap for very tall screens */
+}
+
+@media (max-width: 56rem) {
+  .sheet-viewer .sheet-iframe,
+  .sheet-iframe {
+    height: calc(100vh - 10rem);
+    min-height: 50vh;
+  }
+}
+
+.sheet-viewer a {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.625rem 1.875rem;
+  background: var(--accent);
+  color: var(--button-text);
+  text-decoration: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+.sheet-viewer a:hover {
+  opacity: 0.9;
+}
+
+.sheet-viewer iframe {
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+}
+
+/* DM Notes */
+.dm-notes-tab h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.dm-notes-warning {
+  background: #856404;
+  color: #fff3cd;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+
+.dm-notes-tab textarea {
+  width: 100%;
+  padding: 0.938rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+  font-family: monospace;
+}
+
+.dm-notes-tab button {
+  padding: 0.625rem 1.875rem;
+  background: var(--accent);
+  color: var(--button-text);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Scrapbook */
+.scrapbook-tab h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.scrapbook-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.scrapbook-upload {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--bg);
+  border: 0.125rem dashed var(--border);
+  border-radius: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrapbook-upload label,
+.scrapbook-upload button {
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+}
+
+.scrapbook-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+  gap: 1.25rem;
+}
+
+.scrapbook-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 3.125rem;
+  font-style: italic;
+  grid-column: 1 / -1;
+}
+
+.scrapbook-item {
+  background: var(--bg);
+  border: 0.063rem solid var(--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scrapbook-item:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+.scrapbook-image {
+  width: 100%;
+  height: 15.625rem;
+  background: #1a1a1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 0.2s;
+}
+
+.scrapbook-image:hover {
+  opacity: 0.85;
+}
+
+.scrapbook-image:hover::after {
+  content: 'Clique para ampliar';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.scrapbook-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scrapbook-caption {
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+}
+
+.scrapbook-caption input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.063rem solid var(--border);
+  border-radius: 0.25rem;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.scrapbook-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-top: 0.063rem solid var(--border);
+  gap: 0.5rem;
+}
+
+.scrapbook-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.scrapbook-date {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.scrapbook-meta .btn-download {
+  padding: 0.375rem 0.625rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.scrapbook-meta .btn-download:hover {
+  opacity: 0.9;
+  transform: translateY(-0.063rem);
+}
+
+.scrapbook-meta .btn-delete-small {
+  padding: 0.375rem 0.75rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.813rem;
+}
+
+.scrapbook-meta .btn-delete-small:hover {
+  background: #c82333;
+}
+
+/* Image Lightbox */
+.image-lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 2rem;
+  animation: fadeIn 0.2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 0.125rem solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.lightbox-caption {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.lightbox-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.lightbox-actions button {
+  padding: 0.625rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 48rem) {
+  .character-page {
+    padding: 1rem;
+  }
+  
+  .character-header h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .character-actions {
+    flex-wrap: wrap;
+  }
+  
+  .character-actions button {
+    min-height: 2.75rem;
+    flex: 1 1 calc(50% - 0.313rem);
+  }
+  
+  .character-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  
+  .character-tabs button {
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  
+  .character-tab-content {
+    padding: 1.25rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .stat-card {
+    padding: 0.875rem;
+  }
+  
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inventory-grid {
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  }
+  
+  .spells-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .notes-list {
+    gap: 0.75rem;
+  }
+  
+  .note-item {
+    padding: 1rem;
+  }
+  
+  .diary-entry {
+    padding: 1rem;
+  }
+  
+  .diary-entry-header h3 {
+    font-size: 1.125rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+    gap: 0.625rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+    padding: 1.25rem;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 36rem) {
+  .character-header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .character-actions {
+    flex-direction: column;
+  }
+  
+  .character-actions button {
+    width: 100%;
+    min-height: 3rem;
+  }
+  
+  .character-tabs button {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+  }
+  
+  .character-tab-content {
+    padding: 1rem;
+    min-height: auto;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inventory-grid {
+    grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+  }
+  
+  .lightbox-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .lightbox-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .lightbox-actions button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,149 @@
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 12, 23, 0.65);
+  z-index: 99;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 17.25rem;
+  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #111a2c 0%, #16233b 100%);
+  border-right: 1px solid rgba(181, 207, 255, 0.28);
+  overflow-y: auto;
+  transition: transform 0.3s ease, padding-top 0.3s ease;
+  z-index: 100;
+  padding-top: clamp(4rem, 8vh, 6rem);
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar-content {
+  padding: 1.1rem 1rem 1.25rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-section {
+  margin-bottom: 1.4rem;
+}
+
+.sidebar-section:last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.sidebar-title {
+  color: #b6d9ff;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.65rem;
+  font-weight: 700;
+}
+
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-list li {
+  margin-bottom: 0.24rem;
+}
+
+.sidebar-link {
+  display: block;
+  color: #deecff;
+  text-decoration: none;
+  border-radius: 0.56rem;
+  padding: 0.48rem 0.62rem;
+  font-size: 0.86rem;
+  border: 1px solid transparent;
+}
+
+.sidebar-link:hover {
+  background: rgba(122, 188, 255, 0.16);
+  border-color: rgba(176, 218, 255, 0.35);
+}
+
+.page-link {
+  padding-left: 0.76rem;
+}
+
+.item-kind {
+  color: #8ed8ff;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.category-name {
+  color: #d3e8ff;
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.45rem 0.62rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(205, 225, 255, 0.2);
+  border-radius: 0.56rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.category-name:hover {
+  background: rgba(140, 199, 255, 0.12);
+}
+
+.folder-icon {
+  font-size: 0.68rem;
+  width: 0.85rem;
+  color: #9bd4ff;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.56rem;
+  padding: 0.46rem 0.62rem;
+  margin-bottom: 0.42rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(205, 225, 255, 0.16);
+  font-size: 0.82rem;
+}
+
+.stat-label {
+  color: #c6dbff;
+}
+
+.stat-value {
+  color: #7de4c9;
+  font-weight: 700;
+}
+
+@media (max-width: 56rem) {
+  .sidebar-backdrop {
+    display: block;
+  }
+
+  .sidebar {
+    width: 86vw;
+    max-width: 20rem;
+    padding-top: 3.5rem;
+    box-shadow: 10px 0 28px rgba(6, 13, 27, 0.45);
+  }
+}
+
+@media (max-width: 48rem) {
+  .sidebar {
+    padding-top: 3.5rem;
+  }
+}

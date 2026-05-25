@@ -1,0 +1,59 @@
+﻿# render.yaml ÔÇô Infrastructure-as-Code for Render.com
+# https://render.com/docs/render-yaml-spec
+#
+# ÔÜá´©Å  DATA PERSISTENCE WARNING
+# Render's free tier uses ephemeral storage: all files on disk (including
+# server/data/*.json and server/uploads/) are wiped on every re-deploy or
+# after the instance spins down due to inactivity (~15 min on free plan).
+# Images are safe because they live in Cloudinary.
+# For persistent JSON data, consider upgrading to a paid Render Disk or
+# migrating to MongoDB Atlas (free tier) / Upstash Redis / PlanetScale.
+
+services:
+  - type: web
+    name: wiki-server
+    env: node
+    # Tell Render where the server code lives
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    # Health-check so Render knows when the service is ready
+    healthCheckPath: /api/update
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      # Render injects PORT automatically; keep this as a fallback
+      - key: PORT
+        value: 3001
+
+      # Auto-generated strong secret on first deploy
+      - key: SESSION_SECRET
+        generateValue: true
+
+      # Required only when database has no users in production
+      - key: BOOTSTRAP_ADMIN_USERNAME
+        sync: false
+      - key: BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
+
+      # Replace with your actual Vercel frontend URL (no trailing slash)
+      # You can also set this in the Render dashboard after deploying.
+      - key: ALLOWED_ORIGINS
+        value: https://wiki.viviraia.uk
+
+      # MongoDB Atlas connection string ÔÇô set in the Render dashboard
+      # https://cloud.mongodb.com ÔåÆ Cluster ÔåÆ Connect ÔåÆ Drivers
+      - key: MONGODB_URI
+        sync: false
+
+      # Cloudinary credentials ÔÇô fill these in the Render dashboard
+      # Dashboard ÔåÆ your service ÔåÆ Environment
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false

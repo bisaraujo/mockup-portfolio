@@ -1,0 +1,690 @@
+/* Light Theme (sunlit studio) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* The rule targets `body.fantasy-theme` so existing theme toggles remain
+   compatible. */
+body.fantasy-theme {
+  --bg-primary: #f7f3ed;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1ece3;
+  --bg-gradient-start: #fff7ee;
+  --bg-gradient-end: #f1e9dd;
+
+  --surface-1: #ffffff;
+  --surface-2: #f7f2e9;
+  --surface-3: #efe7dc;
+
+  /* Stronger, higher-contrast text colors */
+  --text-primary: #1f1b16;
+  --text-secondary: #4d4a42;
+  --text-tertiary: #6f6a5f;
+  --text-accent: #0f4c5c;
+  --text-italic: var(--text-secondary);
+
+  --accent-primary: #0f766e;
+  --accent-secondary: #0b5f57;
+  --accent-hover: #0f867d;
+  --accent-warm: #f59e0b;
+
+  --border-color: #e4d8c8;
+  --border-accent: #f2b880;
+
+  --shadow-color: rgba(36, 30, 21, 0.12);
+
+  --button-text: #fffaf2;
+  --accent: var(--accent-primary);
+
+  --bg: var(--bg-secondary);
+  --text: var(--text-primary);
+  --border: var(--border-color);
+  --hover: rgba(15, 118, 110, 0.08);
+
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(120% 120% at 0% 0%, rgba(255, 200, 140, 0.35), transparent 55%),
+    radial-gradient(90% 90% at 100% 0%, rgba(120, 210, 200, 0.28), transparent 55%),
+    linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  color: var(--text-primary);
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+body.fantasy-theme h1,
+body.fantasy-theme h2,
+body.fantasy-theme h3,
+body.fantasy-theme .logo-text,
+body.fantasy-theme .create-title,
+body.fantasy-theme .page-title,
+body.fantasy-theme .section-head h2,
+body.fantasy-theme .home-hero h1 {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  letter-spacing: 0.01em;
+}
+
+/* Broad high-contrast overrides to ensure dashboard text follows the theme */
+body.fantasy-theme {
+  color: var(--text-primary);
+}
+
+body.fantasy-theme .header,
+body.fantasy-theme .sidebar,
+body.fantasy-theme .main-container,
+body.fantasy-theme .content-wrapper,
+body.fantasy-theme .app,
+body.fantasy-theme .page-card,
+body.fantasy-theme .list-item,
+body.fantasy-theme .content-box,
+body.fantasy-theme .hero-section,
+body.fantasy-theme .page-title,
+body.fantasy-theme .hero-title,
+body.fantasy-theme .page-card-title,
+body.fantasy-theme .section-title,
+body.fantasy-theme .logo-text,
+body.fantasy-theme .nav-link,
+body.fantasy-theme .mobile-nav-link,
+body.fantasy-theme .user-name,
+body.fantasy-theme .mobile-nav-user,
+body.fantasy-theme .sidebar-title,
+body.fantasy-theme .sidebar-link,
+body.fantasy-theme .category-name,
+body.fantasy-theme .stat-label,
+body.fantasy-theme .stat-value,
+body.fantasy-theme .create-btn,
+body.fantasy-theme .btn-primary,
+body.fantasy-theme .btn-secondary,
+body.fantasy-theme .btn-edit,
+body.fantasy-theme .search-input,
+body.fantasy-theme .form-label,
+body.fantasy-theme .form-hint,
+body.fantasy-theme .content-box p,
+body.fantasy-theme .preview-content p {
+  color: var(--text-primary) !important;
+}
+
+/* Placeholders */
+body.fantasy-theme .search-input::placeholder,
+body.fantasy-theme input::placeholder,
+body.fantasy-theme textarea::placeholder {
+  color: var(--text-tertiary) !important;
+  opacity: 1 !important;
+}
+
+/* Mobile drawer and search bar backgrounds */
+body.fantasy-theme .mobile-search-bar,
+body.fantasy-theme .mobile-nav-drawer {
+  background: var(--bg-secondary) !important;
+  border-top-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Buttons and interactive elements */
+body.fantasy-theme .menu-button,
+body.fantasy-theme .mobile-icon-btn,
+body.fantasy-theme .nav-link,
+body.fantasy-theme .mobile-nav-link {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border-color: transparent !important;
+}
+
+body.fantasy-theme .search-input {
+  background: #fff !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+body.fantasy-theme .search-input:focus {
+  box-shadow: 0 0 0 3px rgba(47,116,214,0.08) !important;
+  border-color: var(--accent-secondary) !important;
+}
+
+body.fantasy-theme .search-button,
+body.fantasy-theme .btn-primary,
+body.fantasy-theme .create-btn {
+  background: var(--accent-primary) !important;
+  color: var(--button-text) !important;
+  border-color: var(--accent-secondary) !important;
+}
+
+body.fantasy-theme .btn-secondary { background: transparent !important; color: var(--text-primary) !important; border-color: var(--border-color) !important; }
+
+body.fantasy-theme a { color: var(--accent-primary) !important; }
+body.fantasy-theme a:hover { color: var(--accent-hover) !important; }
+
+
+/* Header */
+body.fantasy-theme .header {
+  background: linear-gradient(135deg, #fffaf3 0%, #f1e9dd 70%, #efe3d2 100%);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 12px 24px rgba(62, 49, 32, 0.12);
+  position: fixed;
+  top: 0;
+}
+
+body.fantasy-theme .logo-text {
+  color: var(--text-accent);
+  font-weight: 700;
+}
+
+/* Nav */
+body.fantasy-theme .menu-button,
+body.fantasy-theme .nav-link {
+  color: var(--text-primary);
+}
+body.fantasy-theme .menu-button:hover,
+body.fantasy-theme .nav-link:hover {
+  background: rgba(74,144,226,0.06);
+  color: var(--accent-hover);
+}
+
+/* Buttons */
+body.fantasy-theme .create-btn {
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-secondary);
+  color: var(--button-text);
+}
+body.fantasy-theme .create-btn:hover { background: var(--accent-hover); }
+
+/* Mobile */
+body.fantasy-theme .mobile-icon-btn { color: var(--text-primary); }
+body.fantasy-theme .mobile-icon-btn:hover { background: rgba(74,144,226,0.06); }
+
+/* Sidebar */
+body.fantasy-theme .sidebar {
+  background: linear-gradient(180deg, #fffdf7 0%, #f3eadf 100%);
+  border-right: 1px solid var(--border-color);
+  box-shadow: 0 14px 24px rgba(61, 49, 35, 0.12);
+}
+
+/* Cards and content */
+body.fantasy-theme .page-card,
+body.fantasy-theme .list-item,
+body.fantasy-theme .content-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+body.fantasy-theme .page-card-title,
+body.fantasy-theme .list-item-title {
+  color: var(--text-primary);
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+}
+
+/* Forms */
+body.fantasy-theme .form-input,
+body.fantasy-theme .form-textarea,
+body.fantasy-theme .editor-textarea {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+body.fantasy-theme .form-input:focus,
+body.fantasy-theme .form-textarea:focus,
+body.fantasy-theme .editor-textarea:focus {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.08);
+}
+
+/* Toolbar */
+body.fantasy-theme .toolbar-btn {
+  background: #fff;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+body.fantasy-theme .toolbar-btn.wiki-link-btn {
+  background: #eef8ff;
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+}
+
+/* Buttons primary/secondary */
+body.fantasy-theme .btn-primary,
+body.fantasy-theme .btn-edit {
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-secondary);
+  color: #fff;
+}
+body.fantasy-theme .btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+body.fantasy-theme .view-btn {
+  color: var(--button-text) !important;
+}
+
+body.fantasy-theme .sheet-viewer a {
+  color: var(--button-text) !important;
+}
+
+/* Links */
+body.fantasy-theme a { color: var(--accent-primary); }
+body.fantasy-theme a:hover { color: var(--accent-hover); }
+
+/* Code / pre */
+body.fantasy-theme .content-box code,
+body.fantasy-theme .preview-content code,
+body.fantasy-theme pre,
+body.fantasy-theme code {
+  background: #f4fbff;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+}
+
+/* Blockquote */
+body.fantasy-theme blockquote {
+  border-left: 4px solid var(--accent-secondary);
+  background: rgba(74,144,226,0.03);
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  font-style: italic;
+}
+
+/* Table */
+body.fantasy-theme th {
+  background: var(--bg-tertiary);
+  color: var(--text-accent);
+}
+
+/* Scrollbar */
+body.fantasy-theme ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+body.fantasy-theme ::-webkit-scrollbar-thumb { background: var(--border-color); border: 1px solid var(--border-accent); }
+body.fantasy-theme ::-webkit-scrollbar-thumb:hover { background: var(--accent-secondary); }
+
+/* Header/component-specific fine-tuning */
+body.fantasy-theme .header-content,
+body.fantasy-theme .header-nav,
+body.fantasy-theme .mobile-actions,
+body.fantasy-theme .logo,
+body.fantasy-theme .logo-img,
+body.fantasy-theme .user-info,
+body.fantasy-theme .mobile-nav-divider,
+body.fantasy-theme .mobile-admin-badge,
+body.fantasy-theme .logout-btn,
+body.fantasy-theme .theme-row,
+body.fantasy-theme .logout-row {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .user-info { border-left-color: var(--border-color) !important; }
+body.fantasy-theme .mobile-nav-divider { background: var(--border-color) !important; }
+body.fantasy-theme .mobile-admin-badge {
+  background: rgba(47,116,214,0.08) !important;
+  border: 1px solid rgba(47,116,214,0.16) !important;
+  color: var(--accent-primary) !important;
+}
+body.fantasy-theme .logout-btn {
+  background: rgba(255,108,108,0.06) !important;
+  border-color: rgba(255,108,108,0.12) !important;
+  color: var(--text-primary) !important;
+}
+body.fantasy-theme .theme-row { color: var(--accent-secondary) !important; }
+body.fantasy-theme .logo-img { border-radius: 0.5rem; }
+
+/* Utilities */
+body.fantasy-theme .muted { color: var(--text-tertiary); }
+body.fantasy-theme .success { color: #2ecc71; }
+body.fantasy-theme .danger { color: #e74c3c; }
+
+/* Home hero overrides for high contrast and theme consistency */
+body.fantasy-theme .home-hero {
+  background:
+    radial-gradient(70% 90% at 10% 0%, rgba(255, 210, 150, 0.6), transparent 60%),
+    radial-gradient(60% 80% at 100% 0%, rgba(134, 230, 210, 0.5), transparent 60%),
+    linear-gradient(150deg, #fff6ea 0%, #f6efe4 100%) !important;
+  border: 1px solid var(--border-color) !important;
+  box-shadow: 0 24px 50px rgba(62, 49, 32, 0.18) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .home-hero h1,
+body.fantasy-theme .home-hero h1 a {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .home-hero p {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .hero-kicker {
+  background: rgba(15, 118, 110, 0.12) !important;
+  color: var(--accent-primary) !important;
+  border-color: rgba(15, 118, 110, 0.2) !important;
+}
+
+body.fantasy-theme .hero-actions {
+  margin-top: 1.3rem;
+}
+
+body.fantasy-theme .hero-link {
+  color: var(--text-primary) !important;
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+body.fantasy-theme .hero-link.primary {
+  background: var(--accent-primary) !important;
+  border-color: var(--accent-secondary) !important;
+  color: var(--button-text) !important;
+}
+
+body.fantasy-theme .hero-link.secondary {
+  background: transparent !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .metric-card,
+body.fantasy-theme .section-block,
+body.fantasy-theme .hub-card,
+body.fantasy-theme .activity-item,
+body.fantasy-theme .folder-panel,
+body.fantasy-theme .character-card {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 12px 24px rgba(62, 49, 32, 0.1) !important;
+}
+
+body.fantasy-theme .page-header {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 18px 36px rgba(62, 49, 32, 0.12) !important;
+}
+
+body.fantasy-theme .page-title {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .page-category {
+  background: rgba(15, 118, 110, 0.14) !important;
+  color: var(--accent-secondary) !important;
+}
+
+body.fantasy-theme .page-date {
+  color: var(--text-tertiary) !important;
+}
+
+body.fantasy-theme .content-box {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .content-box h1,
+body.fantasy-theme .content-box h2,
+body.fantasy-theme .content-box h3,
+body.fantasy-theme .content-box h4,
+body.fantasy-theme .content-box h5,
+body.fantasy-theme .content-box h6 {
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .content-box p {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .content-box code,
+body.fantasy-theme .content-box pre,
+body.fantasy-theme .content-box th,
+body.fantasy-theme .content-box td {
+  border-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .content-box code,
+body.fantasy-theme .content-box pre {
+  background: #fff3e5 !important;
+  color: #2a251d !important;
+}
+
+body.fantasy-theme .content-box blockquote {
+  border-left-color: var(--accent-primary) !important;
+  background: rgba(15, 118, 110, 0.08) !important;
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .content-box blockquote .author,
+body.fantasy-theme .content-box figcaption,
+body.fantasy-theme .content-box img + p {
+  color: var(--text-tertiary) !important;
+}
+
+body.fantasy-theme .page-sidebar,
+body.fantasy-theme .sidebar-quote,
+body.fantasy-theme .page-footer {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .sidebar-image {
+  background: var(--surface-3) !important;
+}
+
+body.fantasy-theme .sidebar-info-label,
+body.fantasy-theme .info-label {
+  color: var(--text-tertiary) !important;
+}
+
+body.fantasy-theme .sidebar-info-value,
+body.fantasy-theme .info-value {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .edit-mode {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 16px 32px rgba(62, 49, 32, 0.12) !important;
+}
+
+body.fantasy-theme .edit-header {
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .edit-title {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .sidebar-editor-section {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .image-preview {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .editor-select,
+body.fantasy-theme .editor-item,
+body.fantasy-theme .editor-message {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .editor-item span,
+body.fantasy-theme .no-editors {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .folder-toggle,
+body.fantasy-theme .folder-item-link {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .folder-toggle:hover,
+body.fantasy-theme .folder-item-link:hover {
+  background: var(--surface-2) !important;
+  border-color: rgba(15, 118, 110, 0.3) !important;
+}
+
+body.fantasy-theme .folder-arrow,
+body.fantasy-theme .folder-count,
+body.fantasy-theme .folder-item-link p,
+body.fantasy-theme .folder-item-arrow {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .folder-item-link h5 {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .empty-panel {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-color) !important;
+  background: var(--surface-2) !important;
+}
+
+body.fantasy-theme .metric-label,
+body.fantasy-theme .card-meta,
+body.fantasy-theme .activity-date,
+body.fantasy-theme .result-meta,
+body.fantasy-theme .form-hint {
+  color: var(--text-tertiary) !important;
+}
+
+body.fantasy-theme .metric-card strong,
+body.fantasy-theme .hub-card h3,
+body.fantasy-theme .activity-text h4,
+body.fantasy-theme .section-head h2 {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .hub-card p,
+body.fantasy-theme .activity-text p {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .type-chip.event {
+  background: rgba(15, 118, 110, 0.12) !important;
+  border-color: rgba(15, 118, 110, 0.22) !important;
+  color: var(--accent-primary) !important;
+}
+
+body.fantasy-theme .type-chip.note {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border-color: rgba(245, 158, 11, 0.28) !important;
+  color: #9a5b00 !important;
+}
+
+body.fantasy-theme .create-title {
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .create-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .create-form,
+body.fantasy-theme .tips-section,
+body.fantasy-theme .sidebar-editor-section,
+body.fantasy-theme .character-tab-content,
+body.fantasy-theme .diary-entry-form {
+  background: var(--surface-1) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 18px 34px rgba(62, 49, 32, 0.12) !important;
+}
+
+body.fantasy-theme .form-label {
+  color: var(--text-accent) !important;
+}
+
+body.fantasy-theme .form-input,
+body.fantasy-theme .form-textarea,
+body.fantasy-theme .editor-textarea {
+  background: #fffdf8 !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .css-editor {
+  background: #fff7ee !important;
+  color: #2c2a24 !important;
+  border-color: rgba(242, 184, 128, 0.5) !important;
+}
+
+body.fantasy-theme .editor-toolbar,
+body.fantasy-theme .editor-preview,
+body.fantasy-theme .preview-label {
+  background: var(--surface-2) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+body.fantasy-theme .toolbar-btn {
+  background: #fffdf8 !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .toolbar-btn.wiki-link-btn {
+  background: rgba(15, 118, 110, 0.12) !important;
+  border-color: rgba(15, 118, 110, 0.28) !important;
+  color: var(--accent-secondary) !important;
+}
+
+body.fantasy-theme .preview-content {
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .preview-content h1,
+body.fantasy-theme .preview-content h2,
+body.fantasy-theme .preview-content h3,
+body.fantasy-theme .preview-content h4 {
+  color: var(--text-primary) !important;
+  border-bottom-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .preview-content code,
+body.fantasy-theme .preview-content pre,
+body.fantasy-theme .preview-content th,
+body.fantasy-theme .preview-content td {
+  border-color: var(--border-color) !important;
+}
+
+body.fantasy-theme .preview-content code,
+body.fantasy-theme .preview-content pre {
+  background: #fff3e5 !important;
+  color: #2a251d !important;
+}
+
+body.fantasy-theme .preview-content blockquote {
+  border-left-color: var(--accent-primary) !important;
+  background: rgba(15, 118, 110, 0.08) !important;
+  color: var(--text-secondary) !important;
+}
+
+body.fantasy-theme .editor-textarea:focus,
+body.fantasy-theme .form-input:focus,
+body.fantasy-theme .form-textarea:focus,
+body.fantasy-theme .search-input:focus {
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18) !important;
+}
+
+@keyframes lightFadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body.fantasy-theme .home-hero {
+  animation: lightFadeUp 0.6s ease-out both;
+}
+
+body.fantasy-theme .metric-card {
+  animation: lightFadeUp 0.5s ease-out both;
+}
+
+body.fantasy-theme .metric-card:nth-child(2) { animation-delay: 0.06s; }
+body.fantasy-theme .metric-card:nth-child(3) { animation-delay: 0.12s; }
+body.fantasy-theme .metric-card:nth-child(4) { animation-delay: 0.18s; }
+
+body.fantasy-theme .hero-link:hover {
+  transform: translateY(-1px) !important;
+  filter: brightness(0.98) !important;
+}

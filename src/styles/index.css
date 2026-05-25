@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #1a1a1e;
+  color: #f0f0f0;
+  line-height: 1.6;
+  
+  /* CSS Variables for Dark Theme */
+  --button-text: #ffffff;
+  --accent: #4a9eff;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #4a9eff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #7ab8ff;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a2a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 0.3125rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+/* Mobile-specific enhancements */
+@media (max-width: 48rem) {
+  body {
+    -webkit-tap-highlight-color: rgba(74, 158, 255, 0.2);
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Ensure touch targets are at least 2.75rem (44px) */
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+  }
+  
+  /* Better text input on mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select {
+    font-size: 1rem; /* Prevents zoom on iOS */
+  }
+  
+  /* Smooth scrolling on mobile */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 36rem) {
+  /* Slightly larger touch targets for small phones */
+  button,
+  a.btn,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"] {
+    min-height: 3rem;
+  }
+}

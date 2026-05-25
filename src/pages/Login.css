@@ -1,0 +1,169 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.login-box {
+  background: #0f3460;
+  border-radius: 0.625rem;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 25rem;
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
+}
+
+.login-box h1 {
+  margin: 0 0 0.5rem 0;
+  color: #e94560;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.login-subtitle {
+  margin: 0 0 1.875rem 0;
+  color: #aaa;
+  text-align: center;
+  font-size: 0.9375rem;
+}
+
+.login-error {
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid #e94560;
+  color: #ff6b85;
+  padding: 0.75rem;
+  border-radius: 0.3125rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #1a1a2e;
+  border-radius: 0.3125rem;
+  background: #16213e;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.9375rem;
+  background: #e94560;
+  color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-button:hover:not(:disabled) {
+  background: #d63850;
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-info {
+  margin-top: 1.875rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #1a1a2e;
+  color: #999;
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.login-info p {
+  margin: 0.3125rem 0;
+}
+
+.login-info strong {
+  color: #e0e0e0;
+}
+
+/* Fantasy theme */
+body.fantasy-theme .login-container {
+  background: linear-gradient(135deg, #d4c4a8 0%, #c4b5a0 100%);
+}
+
+body.fantasy-theme .login-box {
+  background: #e8dcc4;
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+  border: 0.125rem solid #7a1f1f;
+}
+
+body.fantasy-theme .login-box h1 {
+  color: #7a1f1f;
+}
+
+body.fantasy-theme .login-subtitle {
+  color: #5a4a3a;
+}
+
+body.fantasy-theme .login-error {
+  background: rgba(122, 31, 31, 0.1);
+  border-color: #7a1f1f;
+  color: #7a1f1f;
+}
+
+body.fantasy-theme .form-group label {
+  color: #3a2a1a;
+}
+
+body.fantasy-theme .form-group input {
+  background: #f5eed9;
+  border-color: #7a1f1f;
+  color: #3a2a1a;
+}
+
+body.fantasy-theme .form-group input:focus {
+  border-color: #a52a2a;
+}
+
+body.fantasy-theme .login-button {
+  background: #7a1f1f;
+}
+
+body.fantasy-theme .login-button:hover:not(:disabled) {
+  background: #5a1515;
+}
+
+body.fantasy-theme .login-info {
+  border-color: #7a1f1f;
+  color: #5a4a3a;
+}
+
+body.fantasy-theme .login-info strong {
+  color: #3a2a1a;
+}

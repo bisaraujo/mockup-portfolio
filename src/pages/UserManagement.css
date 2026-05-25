@@ -1,0 +1,386 @@
+.user-management {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.user-management h1 {
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+}
+
+.user-management h2 {
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.alert-error {
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid #e94560;
+  color: #ff6b85;
+}
+
+.alert-success {
+  background: rgba(76, 175, 80, 0.2);
+  border: 1px solid #4caf50;
+  color: #66bb6a;
+}
+
+.management-section {
+  background: #0f3460;
+  padding: 2rem;
+  border-radius: 0.625rem;
+  margin-bottom: 2rem;
+  border: 1px solid #1a4d7a;
+}
+
+.create-user-form {
+  margin-top: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 12.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #1a4d7a;
+  border-radius: 0.375rem;
+  background: #16213e;
+  color: #e0e0e0;
+  font-size: 0.9375rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4a9eff;
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.users-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+thead {
+  background: #16213e;
+}
+
+th {
+  padding: 0.875rem;
+  text-align: left;
+  font-weight: 600;
+  color: #f0f0f0;
+  border-bottom: 2px solid #1a4d7a;
+}
+
+td {
+  padding: 0.875rem;
+  color: #e0e0e0;
+  border-bottom: 1px solid #1a4d7a;
+}
+
+tbody tr {
+  transition: background 0.2s;
+}
+
+tbody tr:hover {
+  background: rgba(74, 158, 255, 0.05);
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  background: #4a9eff;
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-badge.admin {
+  background: rgba(233, 69, 96, 0.2);
+  color: #ff6b85;
+  border: 1px solid #e94560;
+}
+
+.role-badge.user {
+  background: rgba(74, 158, 255, 0.2);
+  color: #7ab8ff;
+  border: 1px solid #4a9eff;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.password-change-inline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.password-change-inline input {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn {
+  background: #4a9eff;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+  background: #3a8eef;
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+}
+
+.btn-primary {
+  background: #4a9eff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3a8eef;
+}
+
+.btn-danger {
+  background: #e94560;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #d63850;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #aaa;
+  font-size: 1.125rem;
+}
+
+/* Fantasy theme */
+body.fantasy-theme .user-management h1,
+body.fantasy-theme .user-management h2 {
+  color: #3a2a1a;
+}
+
+body.fantasy-theme .management-section {
+  background: #e8dcc4;
+  border-color: #7a1f1f;
+}
+
+body.fantasy-theme .alert-error {
+  background: rgba(122, 31, 31, 0.1);
+  border-color: #7a1f1f;
+  color: #7a1f1f;
+}
+
+body.fantasy-theme .alert-success {
+  background: rgba(76, 119, 79, 0.15);
+  border-color: #4c774f;
+  color: #3a5a3d;
+}
+
+body.fantasy-theme .form-group label {
+  color: #3a2a1a;
+}
+
+body.fantasy-theme .form-group input,
+body.fantasy-theme .form-group select {
+  background: #f5eed9;
+  border-color: #7a1f1f;
+  color: #3a2a1a;
+}
+
+body.fantasy-theme .form-group input:focus,
+body.fantasy-theme .form-group select:focus {
+  border-color: #a52a2a;
+}
+
+body.fantasy-theme thead {
+  background: #d4c4a8;
+}
+
+body.fantasy-theme th {
+  color: #3a2a1a;
+  border-bottom-color: #7a1f1f;
+}
+
+body.fantasy-theme td {
+  color: #3a2a1a;
+  border-bottom-color: #c4b5a0;
+}
+
+body.fantasy-theme tbody tr:hover {
+  background: rgba(122, 31, 31, 0.05);
+}
+
+body.fantasy-theme .badge {
+  background: #7a1f1f;
+}
+
+body.fantasy-theme .role-badge.admin {
+  background: rgba(122, 31, 31, 0.15);
+  color: #7a1f1f;
+  border-color: #7a1f1f;
+}
+
+body.fantasy-theme .role-badge.user {
+  background: rgba(90, 74, 58, 0.15);
+  color: #5a4a3a;
+  border-color: #5a4a3a;
+}
+
+body.fantasy-theme .btn {
+  background: #7a1f1f;
+}
+
+body.fantasy-theme .btn:hover:not(:disabled) {
+  background: #5a1515;
+}
+
+body.fantasy-theme .btn-primary {
+  background: #7a1f1f;
+}
+
+body.fantasy-theme .btn-primary:hover:not(:disabled) {
+  background: #5a1515;
+}
+
+body.fantasy-theme .btn-danger {
+  background: #a52a2a;
+}
+
+body.fantasy-theme .btn-danger:hover:not(:disabled) {
+  background: #8b2020;
+}
+
+body.fantasy-theme .loading {
+  color: #5a4a3a;
+}
+
+@media (max-width: 48rem) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group select {
+    font-size: 1rem; /* Prevents zoom on iOS */
+  }
+  
+  .users-table {
+    font-size: 0.875rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+    min-height: 2.75rem;
+  }
+  
+  .password-change-inline {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .password-change-inline input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 36rem) {
+  .users-table {
+    font-size: 0.8125rem;
+  }
+  
+  .users-table th,
+  .users-table td {
+    padding: 0.5rem 0.375rem;
+  }
+  
+  .action-buttons button {
+    min-height: 3rem;
+    font-size: 0.875rem;
+  }
+}
