@@ -30,13 +30,13 @@ function Login() {
     <div className="login-container">
       <div className="login-box">
         <h1>Acesso do organizador</h1>
-        <p className="login-subtitle">Entre para acessar seu espaco de eventos</p>
+        <p className="login-subtitle">Entre para acessar seu espaço de eventos</p>
         
         {error && <div className="login-error">{error}</div>}
         
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Usuario</label>
+            <label htmlFor="username">Usuário</label>
             <input
               type="text"
               id="username"
