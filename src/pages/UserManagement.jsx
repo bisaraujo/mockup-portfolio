@@ -46,17 +46,17 @@ function UserManagement() {
 
     try {
       if (!newUsername || !newPassword) {
-        throw new Error('Usuario e senha sao obrigatorios')
+        throw new Error('Usuário e senha são obrigatórios')
       }
 
       await authService.register(newUsername, newPassword, newRole)
-      setSuccess(`Usuario "${newUsername}" criado com sucesso`)
+      setSuccess(`Usuário "${newUsername}" criado com sucesso`)
       setNewUsername('')
       setNewPassword('')
       setNewRole('user')
       await loadUsers()
     } catch (err) {
-      setError(err.message || 'Falha ao criar usuario')
+      setError(err.message || 'Falha ao criar usuário')
     } finally {
       setCreating(false)
     }
@@ -69,12 +69,12 @@ function UserManagement() {
 
     try {
       if (!newPasswordValue) {
-        throw new Error('A nova senha e obrigatoria')
+        throw new Error('A nova senha é obrigatória')
       }
 
       await authService.changePassword(userId, newPasswordValue)
       const username = users.find(u => u.id === userId)?.username
-      setSuccess(`Senha alterada para o usuario "${username}"`)
+      setSuccess(`Senha alterada para o usuário "${username}"`)
       setChangingPasswordFor(null)
       setNewPasswordValue('')
     } catch (err) {
@@ -85,7 +85,7 @@ function UserManagement() {
   }
 
   const handleDeleteUser = async (userId, username) => {
-    if (!window.confirm(`Tem certeza de que deseja excluir o usuario "${username}"?`)) {
+    if (!window.confirm(`Tem certeza de que deseja excluir o usuário "${username}"?`)) {
       return
     }
 
@@ -94,34 +94,34 @@ function UserManagement() {
 
     try {
       await authService.deleteUser(userId)
-      setSuccess(`Usuario "${username}" excluido com sucesso`)
+      setSuccess(`Usuário "${username}" excluído com sucesso`)
       await loadUsers()
     } catch (err) {
-      setError(err.message || 'Falha ao excluir usuario')
+      setError(err.message || 'Falha ao excluir usuário')
     }
   }
 
   if (loading) {
     return (
       <div className="user-management">
-        <div className="loading">Carregando usuarios...</div>
+        <div className="loading">Carregando usuários...</div>
       </div>
     )
   }
 
   return (
     <div className="user-management">
-      <h1>Gerenciamento de usuarios</h1>
+      <h1>Gerenciamento de usuários</h1>
 
       {error && <div className="alert alert-error">{error}</div>}
       {success && <div className="alert alert-success">{success}</div>}
 
       <div className="management-section">
-        <h2>Criar novo usuario</h2>
+        <h2>Criar novo usuário</h2>
         <form onSubmit={handleCreateUser} className="create-user-form">
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="username">Usuario</label>
+              <label htmlFor="username">Usuário</label>
               <input
                 type="text"
                 id="username"
@@ -152,7 +152,7 @@ function UserManagement() {
                 onChange={(e) => setNewRole(e.target.value)}
                 disabled={creating}
               >
-                <option value="user">Usuario</option>
+                <option value="user">Usuário</option>
                 <option value="admin">Administrador</option>
               </select>
             </div>
@@ -160,7 +160,7 @@ function UserManagement() {
             <div className="form-group">
               <label>&nbsp;</label>
               <button type="submit" className="btn btn-primary" disabled={creating}>
-                {creating ? 'Criando...' : 'Criar usuario'}
+                {creating ? 'Criando...' : 'Criar usuário'}
               </button>
             </div>
           </div>
@@ -168,15 +168,15 @@ function UserManagement() {
       </div>
 
       <div className="management-section">
-        <h2>Usuarios existentes</h2>
+        <h2>Usuários existentes</h2>
         <div className="users-table">
           <table>
             <thead>
               <tr>
-                <th>Usuario</th>
+                <th>Usuário</th>
                 <th>Perfil</th>
                 <th>Criado em</th>
-                <th>Acoes</th>
+                <th>Ações</th>
               </tr>
             </thead>
             <tbody>
@@ -184,10 +184,10 @@ function UserManagement() {
                 <tr key={user.id}>
                   <td>
                     <strong>{user.username}</strong>
-                    {user.id === currentUser?.id && <span className="badge">Voce</span>}
+                    {user.id === currentUser?.id && <span className="badge">Você</span>}
                   </td>
                   <td>
-                    <span className={`role-badge ${user.role}`}>{user.role === 'admin' ? 'Administrador' : 'Usuario'}</span>
+                    <span className={`role-badge ${user.role}`}>{user.role === 'admin' ? 'Administrador' : 'Usuário'}</span>
                   </td>
                   <td>
                     {user.createdAt 

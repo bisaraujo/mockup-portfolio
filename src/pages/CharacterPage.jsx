@@ -127,7 +127,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setEp(typeof coins.ep === 'number' ? coins.ep : (typeof data.ep === 'number' ? data.ep : (coins.ep || 0)));
     } catch (error) {
       console.error('Erro ao carregar evento:', error);
-      alert('Nao foi possivel carregar o evento');
+      alert('Não foi possível carregar o evento');
     } finally {
       setLoading(false);
     }
@@ -143,7 +143,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
         setPages(data);
       }
     } catch (error) {
-      console.error('Erro ao carregar paginas:', error);
+      console.error('Erro ao carregar páginas:', error);
     }
   };
 
@@ -179,7 +179,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       await loadCharacter();
     } catch (error) {
       console.error('Erro ao salvar evento:', error);
-      alert('Nao foi possivel salvar o evento');
+      alert('Não foi possível salvar o evento');
     }
   };
 
@@ -241,7 +241,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       navigate('/');
     } catch (error) {
       console.error('Erro ao excluir evento:', error);
-      alert('Nao foi possivel excluir o evento');
+      alert('Não foi possível excluir o evento');
     }
   };
 
@@ -269,7 +269,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setNewDiaryEntry('');
     } catch (error) {
       console.error('Erro ao adicionar entrada da Comentario:', error);
-      alert('Nao foi possivel adicionar a anotacao');
+      alert('Não foi possível adicionar a anotação');
     }
   };
 
@@ -281,7 +281,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setDiaryEntries(updatedDiary);
     } catch (error) {
       console.error('Erro ao excluir entrada da Comentario:', error);
-      alert('Nao foi possivel excluir a anotacao');
+      alert('Não foi possível excluir a anotação');
     }
   };
 
@@ -301,7 +301,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setNewItemAmount(1);
     } catch (error) {
       console.error('Erro ao adicionar item:', error);
-      alert('Nao foi possivel adicionar o item');
+      alert('Não foi possível adicionar o item');
     }
   };
 
@@ -312,7 +312,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setEditingItem(null);
     } catch (error) {
       console.error('Erro ao atualizar item:', error);
-      alert('Nao foi possivel atualizar o item');
+      alert('Não foi possível atualizar o item');
     }
   };
 
@@ -322,7 +322,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setInventory(inventory.filter(item => item.id !== itemId));
     } catch (error) {
       console.error('Erro ao excluir item:', error);
-      alert('Nao foi possivel excluir o item');
+      alert('Não foi possível excluir o item');
     }
   };
   
@@ -352,7 +352,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       alert('Notas internas salvas com sucesso');
     } catch (error) {
       console.error('Erro ao salvar notas internas:', error);
-      alert('Nao foi possivel salvar as notas internas');
+      alert('Não foi possível salvar as notas internas');
     }
   };
 
@@ -371,7 +371,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       alert('ATA enviado com sucesso');
     } catch (error) {
       console.error('Erro ao enviar ATA:', error);
-      alert('Nao foi possivel enviar o ATA');
+      alert('Não foi possível enviar o ATA');
     }
   };
 
@@ -394,7 +394,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       e.target.value = '';
     } catch (error) {
       console.error('Erro ao enviar imagem da galeria:', error);
-      alert('Nao foi possivel enviar a imagem');
+      alert('Não foi possível enviar a imagem');
     }
   };
 
@@ -412,7 +412,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setScrapbook(updatedScrapbook);
     } catch (error) {
       console.error('Erro ao adicionar imagem da galeria:', error);
-      alert('Nao foi possivel adicionar a imagem');
+      alert('Não foi possível adicionar a imagem');
     }
   };
 
@@ -426,7 +426,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setScrapbook(updatedScrapbook);
     } catch (error) {
       console.error('Erro ao atualizar legenda:', error);
-      alert('Nao foi possivel atualizar a legenda');
+      alert('Não foi possível atualizar a legenda');
     }
   };
 
@@ -440,7 +440,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
       setScrapbook(updatedScrapbook);
     } catch (error) {
       console.error('Erro ao excluir imagem da galeria:', error);
-      alert('Nao foi possivel remover a imagem');
+      alert('Não foi possível remover a imagem');
     }
   };
 
@@ -542,14 +542,14 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="title" className="form-label">Titulo</label>
+                  <label htmlFor="title" className="form-label">Título</label>
                   <input 
                     type="text"
                     id="title"
                     value={title} 
                     onChange={(e) => setTitle(e.target.value)}
                     className="form-input"
-                    placeholder="Subtitulo do evento"
+                    placeholder="Subtítulo do evento"
                   />
                 </div>
 
@@ -567,7 +567,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="content" className="form-label">Conteudo (HTML habilitado)</label>
+                  <label htmlFor="content" className="form-label">Conteúdo (HTML habilitado)</label>
                   <HTMLEditor value={content} onChange={(e) => setContent(e.target.value)} />
                 </div>
 
@@ -581,7 +581,7 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
                     placeholder="Adicione CSS customizado apenas para esta pagina de evento...&#10;Exemplo:&#10;.page-title { color: #0f4f7f; }&#10;.content-box { border-radius: 16px; }"
                     rows={8}
                   />
-                  <span className="form-hint">Este CSS sera aplicado apenas nesta pagina de evento</span>
+                  <span className="form-hint">Este CSS será aplicado apenas nesta página de evento</span>
                 </div>
 
                 <div className="sidebar-editor-section">
@@ -635,11 +635,11 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
                       placeholder="Adicione uma citacao ou nota..."
                       rows={2}
                     />
-                    <span className="form-hint">Citacao ou nota opcional exibida abaixo da imagem</span>
+                    <span className="form-hint">Citação ou nota opcional exibida abaixo da imagem</span>
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label">Campos de informacao</label>
+                    <label className="form-label">Campos de informação</label>
                     {sidebar.infoFields?.map((field, index) => (
                       <div key={index} className="info-field-row">
                         <input 
@@ -686,14 +686,14 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
                       }}
                       className="btn btn-secondary btn-add-field"
                     >
-                      + Adicionar campo de informacao
+                      + Adicionar campo de informação
                     </button>
                   </div>
                 </div>
 
                 <div className="edit-actions">
                   <button onClick={handleSave} className="btn btn-primary">
-                    Salvar alteracoes
+                    Salvar alterações
                   </button>
                   <button onClick={() => setEditing(false)} className="btn btn-secondary">
                     Cancelar
@@ -742,16 +742,16 @@ export default function CharacterPage({ storedImages = [], addImage = async () =
 
       {activeTab === 'diary' && (
         <div className="character-tab-content diary-tab">
-          <h2>Comentario</h2>
+          <h2>Comentário</h2>
           
           <div className="diary-entry-form">
             <textarea 
               value={newDiaryEntry}
               onChange={(e) => setNewDiaryEntry(e.target.value)}
-              placeholder="Adicione uma anotacao na Comentario..."
+              placeholder="Adicione uma anotação na Comentário..."
               rows={4}
             />
-            <button onClick={handleAddDiaryEntry}>Adicionar anotacao</button>
+            <button onClick={handleAddDiaryEntry}>Adicionar anotação</button>
           </div>
 
           <div className="diary-entries">

@@ -85,7 +85,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
           const users = await authService.getAllUsers()
           setAvailableUsers(users)
         } catch (error) {
-          console.error('Erro ao carregar usuarios:', error)
+          console.error('Erro ao carregar usuários:', error)
         }
       }
     }
@@ -135,7 +135,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
 
   const handleAddEditor = async () => {
     if (!selectedUserId) {
-      setEditorMessage('Selecione um usuario')
+      setEditorMessage('Selecione um usuário para adicionar como editor')
       return
     }
 
@@ -278,8 +278,8 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
     return (
       <div className="wiki-page">
         <div className="not-found">
-          <h1>Nota nao encontrada</h1>
-          <p>A nota que voce procura nao existe.</p>
+          <h1>Nota não encontrada</h1>
+          <p>A nota que você procura não existe.</p>
           <button onClick={() => navigate('/')} className="btn btn-primary">
             Ir para o painel
           </button>
@@ -366,11 +366,11 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
 
           <div className="page-footer">
             <div className="footer-section">
-              <h3 className="footer-title">Informacoes da nota</h3>
+              <h3 className="footer-title">Informações da nota</h3>
               <div className="info-grid">
                 {page.folderPath && (
                   <div className="info-item">
-                    <span className="info-label">Colecao:</span>
+                    <span className="info-label">Coleção:</span>
                     <span className="info-value">{page.folderPath}</span>
                   </div>
                 )}
@@ -411,7 +411,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                         onChange={(e) => setSelectedUserId(e.target.value)}
                         className="editor-select"
                       >
-                        <option value="">Selecione um usuario para adicionar como editor...</option>
+                        <option value="">Selecione um usuário para adicionar como editor...</option>
                         {availableUsers
                           .filter(u => u.role !== 'admin' && (!page.editors || !page.editors.includes(u.id)))
                           .map(user => (
@@ -446,7 +446,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                           })}
                         </ul>
                       ) : (
-                        <p className="no-editors">Nenhum editor atribuido. Somente administradores podem editar esta nota.</p>
+                        <p className="no-editors">Nenhum editor atribuído. Somente administradores podem editar esta nota.</p>
                       )}
                     </div>
                   </div>
@@ -463,7 +463,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
 
           <div className="edit-form">
             <div className="form-group">
-              <label htmlFor="title" className="form-label">Titulo</label>
+              <label htmlFor="title" className="form-label">Título</label>
               <input
                 type="text"
                 id="title"
@@ -498,7 +498,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                   onChange={handleChange}
                   className="form-input"
                 >
-                  <option value="public">Publica (visivel para todos os usuarios autenticados)</option>
+                  <option value="public">Publica (visivel para todos os usuários autenticados)</option>
                   <option value="hidden">Oculta (somente administradores)</option>
                   <option value="private">Privada (reservado)</option>
                 </select>
@@ -508,14 +508,14 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
 
             {isAdmin && (
               <div className="form-group">
-                <label className="form-label">Usuarios permitidos (para notas privadas)</label>
+                <label className="form-label">Usuários permitidos (para notas privadas)</label>
                 <div className="add-allowed-user">
                   <select
                     value={selectedUserId}
                     onChange={(e) => setSelectedUserId(e.target.value)}
                     className="form-input"
                   >
-                    <option value="">Selecione um usuario para conceder acesso...</option>
+                    <option value="">Selecione um usuário para conceder acesso...</option>
                     {availableUsers
                       .filter(u => u.role !== 'admin' && !(editData.allowedUsers || []).includes(u.id))
                       .map(u => (
@@ -580,7 +580,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                 rows="8"
                 placeholder="Adicione CSS customizado somente para esta nota...&#10;Exemplo:&#10;.page-title { color: #0f4f7f; }&#10;.content-box { border-radius: 16px; }"
               />
-              <span className="form-hint">Este CSS sera aplicado apenas nesta nota</span>
+              <span className="form-hint">Este CSS será aplicado apenas nesta nota</span>
             </div>
 
             <div className="sidebar-editor-section">

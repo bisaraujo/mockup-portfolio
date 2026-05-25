@@ -73,7 +73,7 @@ function HomePage({ pages, events = [], characters = [] }) {
                       {item.type === 'event' ? 'Evento' : 'Nota'}
                     </span>
                   </h5>
-                  <p>{stripHtml(item.content).slice(0, 90) || 'Sem descricao ainda.'}</p>
+                  <p>{stripHtml(item.content).slice(0, 90) || 'Sem descrição ainda.'}</p>
                 </div>
                 <span className="folder-item-arrow">Abrir</span>
               </Link>
@@ -116,7 +116,7 @@ function HomePage({ pages, events = [], characters = [] }) {
             recentEvents.map((event) => (
               <Link to={`/event/${event.id}`} key={`event-${event.id}`} className="hub-card">
                 <h3>{event.name}</h3>
-                <p>{stripHtml(event.content).slice(0, 140) || 'Sem descricao ainda.'}</p>
+                <p>{stripHtml(event.content).slice(0, 140) || 'Sem descrição ainda.'}</p>
                 <div className="card-meta">
                   <span>{event.folderPath || 'Sem pasta'}</span>
                   <span>{new Date(event.createdAt).toLocaleDateString()}</span>
@@ -124,7 +124,7 @@ function HomePage({ pages, events = [], characters = [] }) {
               </Link>
             ))
           ) : (
-            <div className="empty-panel">Nenhum evento ainda. Crie o primeiro na pagina de Eventos.</div>
+            <div className="empty-panel">Nenhum evento ainda. Crie o primeiro na página de Eventos.</div>
           )}
         </div>
       </section>
@@ -142,7 +142,7 @@ function HomePage({ pages, events = [], characters = [] }) {
                 </span>
                 <div className="activity-text">
                   <h4>{item.title || item.name}</h4>
-                  <p>{stripHtml(item.content).slice(0, 120) || 'Sem descricao disponivel.'}</p>
+                  <p>{stripHtml(item.content).slice(0, 120) || 'Sem descrição disponível.'}</p>
                 </div>
                 <span className="activity-date">{new Date(item.createdAt).toLocaleDateString()}</span>
               </Link>
@@ -174,7 +174,7 @@ function HomePage({ pages, events = [], characters = [] }) {
                           {item.type === 'event' ? 'Evento' : 'Nota'}
                         </span>
                       </h5>
-                      <p>{stripHtml(item.content).slice(0, 90) || 'Sem descricao ainda.'}</p>
+                      <p>{stripHtml(item.content).slice(0, 90) || 'Sem descrição ainda.'}</p>
                     </div>
                     <span className="folder-item-arrow">Abrir</span>
                   </Link>
@@ -201,7 +201,7 @@ function HomePage({ pages, events = [], characters = [] }) {
           <strong>{pages.length}</strong>
         </article>
         <article className="metric-card">
-          <span className="metric-label">Pastas de nivel superior</span>
+          <span className="metric-label">Pastas de nível superior</span>
           <strong>{Object.keys(folderTree.folders).length}</strong>
         </article>
       </section>

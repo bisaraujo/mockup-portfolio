@@ -63,7 +63,7 @@ function CreatePage({ addPage, storedImages = [], addImage = async () => {}, del
         const users = await import('../services/authService').then((m) => m.default.getAllUsers())
         setAvailableUsers(users)
       } catch (error) {
-        console.error('Erro ao carregar usuarios:', error)
+        console.error('Erro ao carregar usuários:', error)
       }
     }
     loadUsers()
@@ -179,24 +179,24 @@ function CreatePage({ addPage, storedImages = [], addImage = async () => {}, del
               onChange={handleChange}
               className="form-input"
             >
-              <option value="public">Publica (visivel para todos os usuarios autenticados)</option>
+              <option value="public">Publica (visivel para todos os usuários autenticados)</option>
               <option value="hidden">Oculta (somente administradores)</option>
               <option value="private">Privada (reservado)</option>
             </select>
-            <span className="form-hint">Somente administradores podem definir visibilidade. Notas ocultas nao aparecem para usuarios comuns.</span>
+            <span className="form-hint">Somente administradores podem definir visibilidade. Notas ocultas nao aparecem para usuários comuns.</span>
           </div>
         )}
 
         {isAdmin && (
           <div className="form-group">
-            <label className="form-label">Usuarios permitidos (para notas privadas)</label>
+            <label className="form-label">usuários permitidos (para notas privadas)</label>
             <div className="add-allowed-user">
               <select
                 value={selectedAllowedUser}
                 onChange={(e) => setSelectedAllowedUser(e.target.value)}
                 className="form-input"
               >
-                <option value="">Selecione um usuario para conceder acesso...</option>
+                <option value="">Selecione um usuário para conceder acesso...</option>
                 {availableUsers
                   .filter((u) => !formData.allowedUsers.includes(u.id))
                   .map((u) => (
