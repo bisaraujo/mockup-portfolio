@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import HTMLEditor from '../components/HTMLEditor'
 import ImageSelector from '../components/ImageSelector'
 import './CreatePage.css'
 import { useAuth } from '../contexts/AuthContext'
@@ -225,11 +224,14 @@ function CreatePage({ addPage, storedImages = [], addImage = async () => {}, del
         )}
 
         <div className="form-group">
-          <label htmlFor="content" className="form-label">Conteudo da nota * (HTML habilitado)</label>
-          <HTMLEditor
+          <label htmlFor="content" className="form-label">Conteudo da nota * </label>
+          <textarea
+            name="content"
             value={formData.content}
             onChange={handleChange}
+            className="form-textarea"
             placeholder="Escreva sua nota de planejamento aqui... Use tags HTML para formatar."
+            rows={8}
           />
         </div>
 

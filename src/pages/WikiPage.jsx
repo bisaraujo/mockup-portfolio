@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import HTMLEditor from '../components/HTMLEditor'
 import ImageSelector from '../components/ImageSelector'
 import pageService from '../services/pageService'
 import authService from '../services/authService'
@@ -558,10 +557,14 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
             )}
 
             <div className="form-group">
-              <label htmlFor="content" className="form-label">Conteudo (HTML habilitado)</label>
-              <HTMLEditor
+              <label htmlFor="content" className="form-label">Conteudo</label>
+              <textarea
+                id="content"
+                name="content"
                 value={editData.content}
                 onChange={handleChange}
+                className="form-textarea"
+                rows="10"
                 placeholder="Edite sua nota de planejamento..."
               />
             </div>

@@ -66,6 +66,12 @@ function Header({ toggleSidebar, toggleTheme, currentTheme }) {
           <Link to="/events" className="nav-link">
             Eventos
           </Link>
+
+          {!user && (
+            <Link to="/login" className="nav-link login-btn">
+              Login
+            </Link>
+          )}
           
           <button className="theme-switcher nav-link" onClick={toggleTheme}>
             {currentTheme === 'light' ? 'Usar tema moderno' : 'Usar tema claro'}
@@ -144,6 +150,11 @@ function Header({ toggleSidebar, toggleTheme, currentTheme }) {
           <Link to="/events" className="mobile-nav-link" onClick={handleNavClick}>
             Eventos
           </Link>
+          {!user && (
+            <Link to="/login" className="mobile-nav-link" onClick={handleNavClick}>
+              Login
+            </Link>
+          )}
           
           <button
             className="mobile-nav-link theme-row"

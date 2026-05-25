@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { characterService } from '../services/characterService'
-import HTMLEditor from '../components/HTMLEditor'
 import ImageSelector from '../components/ImageSelector'
 import './CreatePage.css'
 import './CreateCharacter.css'
@@ -20,7 +19,6 @@ export default function CreateCharacter({ storedImages = [], addImage = async ()
     title: '',
     content: '',
     folderPath: 'Eventos',
-    customCSS: '',
     sidebar: {
       image: '',
       quote: '',
@@ -242,6 +240,21 @@ export default function CreateCharacter({ storedImages = [], addImage = async ()
         </div>
 
         <div className="form-group">
+          <label htmlFor="content" className="form-label">
+            Detalhes do evento
+          </label>
+          <textarea
+            id="content"
+            name="content"
+            value={formData.content}
+            onChange={handleChange}
+            className="form-textarea"
+            placeholder="Escreva os detalhes, agenda e destaques do evento..."
+            rows={8}
+          />
+        </div>
+
+        <div className="form-group">
           <label htmlFor="folderPath" className="form-label">
             Caminho da pasta
           </label>
@@ -255,33 +268,6 @@ export default function CreateCharacter({ storedImages = [], addImage = async ()
             placeholder="ex.: Eventos/2026/T3"
           />
           <span className="form-hint">Opcional: organize em pastas (use / para separar)</span>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="content" className="form-label">
-            Detalhes do evento (HTML habilitado)
-          </label>
-          <HTMLEditor
-            value={formData.content}
-            onChange={handleChange}
-            placeholder="Escreva os detalhes, agenda e destaques do evento..."
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="customCSS" className="form-label">
-            CSS customizado (opcional)
-          </label>
-          <textarea
-            id="customCSS"
-            name="customCSS"
-            value={formData.customCSS}
-            onChange={handleChange}
-            className="form-textarea css-editor"
-            placeholder="Adicione CSS customizado para esta pagina de evento..."
-            rows={8}
-          />
-          <span className="form-hint">Este CSS sera aplicado apenas nesta pagina de evento</span>
         </div>
 
         <div className="sidebar-editor-section">

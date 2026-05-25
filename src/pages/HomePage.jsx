@@ -93,7 +93,7 @@ function HomePage({ pages, events = [], characters = [] }) {
   return (
     <div className="home-page">
       <section className="home-hero">
-        <p className="hero-kicker">Pagina da Escola</p>
+        
         <h1>Bem Vindos ao Gonzaguinha</h1>
         <p>
           Acompanhe cada evento da nossa instituicao.
