@@ -557,7 +557,7 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
             )}
 
             <div className="form-group">
-              <label htmlFor="content" className="form-label">Conteudo</label>
+              <label htmlFor="content" className="form-label">Conteúdo</label>
               <textarea
                 id="content"
                 name="content"
@@ -619,13 +619,13 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                 />
                 {editData.sidebar.image && (
                   <div className="image-preview">
-                    <img src={editData.sidebar.image} alt="Pre-visualizacao" />
+                    <img src={editData.sidebar.image} alt="Pré-visualização" />
                   </div>
                 )}
               </div>
 
               <div className="form-group">
-                <label htmlFor="sidebar-quote" className="form-label">Citacao/nota da barra lateral</label>
+                <label htmlFor="sidebar-quote" className="form-label">Citação/nota da barra lateral</label>
                 <textarea
                   id="sidebar-quote"
                   value={editData.sidebar.quote}
@@ -634,11 +634,11 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                   rows="2"
                   placeholder="Adicione uma citacao ou nota..."
                 />
-                <span className="form-hint">Citacao ou nota opcional exibida abaixo da imagem</span>
+                <span className="form-hint">Citação ou nota opcional exibida abaixo da imagem</span>
               </div>
 
               <div className="form-group">
-                <label className="form-label">Campos de informacao</label>
+                <label className="form-label">Campos de informação</label>
                 {editData.sidebar.infoFields.map((field, index) => (
                   <div key={index} className="info-field-row">
                     <input
@@ -669,14 +669,14 @@ function WikiPage({ pages, updatePage, deletePage, storedImages = [], addImage =
                   onClick={addInfoField}
                   className="btn btn-secondary btn-add-field"
                 >
-                  + Adicionar campo de informacao
+                  + Adicionar campo de informação
                 </button>
               </div>
             </div>
 
             <div className="edit-actions">
               <button onClick={handleSave} className="btn btn-primary">
-                Salvar alteracoes
+                Salvar alterações
               </button>
               <button onClick={handleCancel} className="btn btn-secondary">
                 Cancelar
